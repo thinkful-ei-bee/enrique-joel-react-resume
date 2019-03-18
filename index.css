@@ -3,3 +3,8 @@ body {
     border: 1px solid aquamarine;
     padding: 30px;
   }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
