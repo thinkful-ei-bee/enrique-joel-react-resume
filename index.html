@@ -28,8 +28,10 @@
 
 
  function App(props) {
-  console.log(props)
+ 
   
+    const skillsArr = props.skillsArray.map((skill , index) => (<li key={index}>{skill}</li>))
+    
   return (
     <div>
         <header>
@@ -40,12 +42,7 @@
     <main>
         <h2>Skills</h2>
         <ul>
-    {/* When is it better to create the children html in the render method and just put props.children (i.e. other.js)... when is it better to just have the html set up and just make new
-    props and simply plug those in like I did here*/}
-          <li>{props.skillsArray[0]}</li> 
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>jQuery</li>
+         {skillsArr}
         </ul>
     </main>
     <section>
@@ -78,7 +75,7 @@
 ReactDOM.render(
   <App className='new-class-name' 
   skillsArray={['JavaScript', 'CSS', 'Html', 'JQuery', 'React']} 
-  name='Joel' blurb=' Im an aspiring full stack web developer. And other stuff.'
+  name='Martha' blurb=' Im an aspiring full stack web developer. And other stuff.'
   anyNameWhatSoEver={['This can be accessed via props.anyNameWhatSoEver']}
    
   />,
